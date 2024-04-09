@@ -1,4 +1,4 @@
-import { FETCH_ALL, CREATE, UPDATE, DELETE, LIKE } from '../constants/actionTypes';
+import { FETCH_ALL, CREATE, UPDATE, DELETE, LIKE } from '../constants/actionTypes.js';
 
 export default (posts = [], action) => {
   switch (action.type) {
@@ -16,4 +16,3 @@ export default (posts = [], action) => {
       return posts;
   }
 };
-
