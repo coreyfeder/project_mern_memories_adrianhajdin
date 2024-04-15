@@ -22,8 +22,8 @@ let connectString = `mongodb+srv://` +                                          
 
 const PORT = process.env.MDB_PORT || 3000;
 
-mongoose.connect(connectString, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(connectString)
   .then(() => app.listen(PORT, () => console.log(`Server Running on Port: http://localhost:${PORT}`)))
   .catch((error) => console.log(`${error} did not connect`));
 
-mongoose.set('useFindAndModify', false);
+// mongoose.set('useFindAndModify', false);  // not a valid option!
